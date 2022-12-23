@@ -1,0 +1,42 @@
+/* FUENTES */
+
+@font-face{
+	font-family: 'Comic Neue';
+	src: url('./assets/fonts/comic-neue/ComicNeue-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Comic Neue';
+	src: url('./assets/fonts/comic-neue/ComicNeue-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+    max-width: 1440px; /* ancho máximo que va a tener nuestra web*/
+    margin: 0 auto; /* la posicionamos en medio */
+    font-family: 'Comic Neue';
+    font-weight: normal;
+    background-color: #99E2FF;
+}
+
+@import 'layouts/_header.scss';
+@import 'layouts/_main-banner.scss';
+@import 'layouts/_suscribe.scss';
+@import 'layouts/_app.scss';
+@import 'layouts/_genesis-box.scss';
+@import 'layouts/_news.scss';
+@import 'layouts/_footer.scss';
+@import 'utilities/_variables.scss';
+@import 'utilities/_mixin.scss';
+
+

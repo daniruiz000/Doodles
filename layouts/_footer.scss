@@ -1,0 +1,18 @@
+
+.footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    background-color: #FFA4D4;
+    &__img{
+        width: 100px;
+    }
+    &__copy{
+        margin-top: 10px;
+        color: #FC7CC5;
+        font-weight: bold;
+    }
+}

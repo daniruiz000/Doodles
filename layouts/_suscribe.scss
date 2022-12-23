@@ -1,0 +1,65 @@
+
+.suscribe{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* otra opción en vez del padding hubiese sido
+    crear un contenedor y darle un ancho y posicionarlo
+    en el centro */
+    padding: 20px 0px;
+    margin: 0 auto;
+    background-color: #80B1FF;
+    &__description{
+        width: 40%;
+        color: white;
+        font-weight: bold;
+    }
+    &__form{
+        width: 30%;
+        form{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        
+
+    }
+    &__title{
+        font-size: 26px;
+        text-shadow: 2px 0px #5086dc;
+    }
+    &__subtitle{
+        font-size: 20px;
+    }
+    &__input{
+        font-family: 'Comic Neue';
+        font-weight: bold;
+        width: 100%;
+        padding: 8px 20px;
+        font-size: 16px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 3px 0px #6d96d8;
+        border: 1px solid lightgray;
+        color: lightgray;
+    }
+    &__submit{
+        width: 80%;
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        color: #5086DC;
+        background-color: white;
+        border-radius: 8px;
+        border:1px solid;
+        box-shadow: 0px 3px 0px #6d96d8;
+        &:hover{
+            color: white;
+            background-color: #5086DC;
+            box-shadow: 0px 3px 0px white;
+        }
+    }
+}
