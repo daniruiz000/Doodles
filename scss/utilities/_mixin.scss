@@ -5,7 +5,7 @@
     align-items:$align-items;
 }
 
-@mixin spaceling ($margin, $padding){
+@mixin spaceling ($margin:0, $padding:0){
     margin: $margin;
     padding:$padding;
 }

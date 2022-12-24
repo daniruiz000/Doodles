@@ -5,7 +5,6 @@
 
     &__header{
         @include spaceling(0 auto, 0);
-        display: block;
         max-width: 70%;
     }
     &__list{
@@ -19,8 +18,6 @@
         width: 40%;
     }
     &__img{
-        display: block;
-        width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }

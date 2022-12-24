@@ -2,10 +2,7 @@
 .main-banner{
     width: 100%;
     position: relative;
-    &__video{
-        width: 100%;
-        display: block; 
-    }
+    
     &__title{
         position: absolute;
         @include spaceling(0 auto, 0);

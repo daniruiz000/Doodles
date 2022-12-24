@@ -14,14 +14,13 @@
         width: 70%;
         &__list{
             @include flex(flex, row nowrap, space-between, center);
-            list-style: none;
         }
         &__item{
             @include spaceling(0, 10px);
-            display: inline-block;
             &:hover{
                 @include colorized ($color-secundary, $color-third);
-                border-radius: 50px;
+                border-radius: 8px;
+                box-shadow: 0px 2px 0px #6d96d8
             }
         }
     }
@@ -34,7 +33,7 @@
         box-shadow: 0px 2px 0px #6d96d8;
         border-radius: 8px;
         &:hover{
-            @include colorized ($color-fourth, $color-third);
+            @include colorized ($color-secundary, $color-third);
             box-shadow: 0px 2px 0px #6d96d8;
         }
     }

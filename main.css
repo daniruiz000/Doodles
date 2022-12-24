@@ -12,12 +12,6 @@
   font-weight: bold;
   font-style: normal;
 }
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   max-width: 1440px; /* ancho máximo que va a tener nuestra web*/
   margin: 0 auto; /* la posicionamos en medio */
@@ -51,17 +45,16 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
 }
 .header .nav__item {
   margin: 0;
   padding: 10px;
-  display: inline-block;
 }
 .header .nav__item:hover {
   color: white;
   background-color: #99E2FF;
-  border-radius: 50px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 0px #6d96d8;
 }
 .header__button {
   margin: 0;
@@ -75,7 +68,7 @@ body {
   border-radius: 8px;
 }
 .header__button:hover {
-  color: #6d96d8;
+  color: white;
   background-color: #99E2FF;
   box-shadow: 0px 2px 0px #6d96d8;
 }
@@ -99,10 +92,6 @@ body {
 .main-banner {
   width: 100%;
   position: relative;
-}
-.main-banner__video {
-  width: 100%;
-  display: block;
 }
 .main-banner__title {
   position: absolute;
@@ -237,7 +226,6 @@ body {
   padding: 0;
   color: #313A71;
   background-color: none;
-  color: #313A71;
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
@@ -272,11 +260,7 @@ body {
   width: 50%;
 }
 .genesis-box__background {
-  width: 100%;
   border-radius: 30px;
-}
-.genesis-box__img {
-  width: 100%;
 }
 .genesis-box__text {
   margin: 10px 0 0 0;
@@ -298,9 +282,7 @@ body {
   padding: 5px 15px;
   color: white;
   background-color: none;
-  display: block;
   font-weight: bold;
-  text-decoration: none;
   text-align: center;
   font-size: 10px;
   width: 40%;
@@ -327,7 +309,6 @@ body {
 .news__header {
   margin: 0 auto;
   padding: 0;
-  display: block;
   max-width: 70%;
 }
 .news__list {
@@ -345,8 +326,6 @@ body {
   width: 40%;
 }
 .news__img {
-  display: block;
-  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -398,4 +377,99 @@ body {
   color: #FC7CC5;
   background-color: none;
   font-weight: bold;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*
+
+  Con este reset vamos a resolver:
+    👉 Unificar el uso de Custom Properties
+    👉 Problemas de box-model más generales
+    👉 Problemas con imagenes, vídeos e iconos svg
+    👉 Problemas con tipografías y etiquetas input en formularios
+    👉 Unificar la tipografía de todas las etiquetas de una web
+
+*/
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+}/*# sourceMappingURL=main.css.map */
