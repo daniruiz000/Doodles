@@ -28,7 +28,8 @@ body{
     font-weight: normal;
     background-color: #99E2FF;
 }
-
+@import 'utilities/_variables.scss';
+@import 'utilities/_mixin.scss';
 @import 'layouts/_header.scss';
 @import 'layouts/_main-banner.scss';
 @import 'layouts/_suscribe.scss';
@@ -36,7 +37,6 @@ body{
 @import 'layouts/_genesis-box.scss';
 @import 'layouts/_news.scss';
 @import 'layouts/_footer.scss';
-@import 'utilities/_variables.scss';
-@import 'utilities/_mixin.scss';
+
 
 

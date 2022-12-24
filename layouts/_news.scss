@@ -1,22 +1,22 @@
+
 .news{
-    margin: 80px auto;
-    width: 90%; 
+    @include spaceling(80px auto, 0);
+    width: 90%;
+
     &__header{
+        @include spaceling(0 auto, 0);
         display: block;
-        margin: 0 auto;
-        width: 70%;
+        max-width: 70%;
     }
     &__list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: start;
-        margin-top: 50px;
+        @include spaceling(50px 0 0 0, 0);
+        @include flex(flex, row wrap, space-between, start);
     }
+
     &__item{
+        @include spaceling(15px auto, 0);
         min-width: 250px;
         width: 40%;
-        margin: 10px auto;
     }
     &__img{
         display: block;
@@ -25,21 +25,31 @@
         border-top-right-radius: 20px;
     }
     &__description{
-        background-color: white;
+        @include colorized(none, $color-secundary);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         
     }
     &__title{
-        padding: 20px 20px 0px 20px;
-        color: #313A71;
+        @include spaceling(0, 20px 20px 0px 20px);
+        @include colorized(#313A71, none);
         font-weight: bold;
         font-size: 18px;
     }
     &__date{
-        padding: 20px;
-        color: darkgray;
+        @include spaceling(0, 20px);
+        @include colorized(darkgray, none);
         font-weight: bold;
         font-size: 16px;
     }  
+}
+
+
+@media screen and (min-width:1024px){
+    .news{
+        &__item{
+            min-width: 200px;
+            width: 20%;
+        }
+    }
 }

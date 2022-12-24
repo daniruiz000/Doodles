@@ -1,29 +1,20 @@
 
 .suscribe{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(flex, row nowrap, space-around, center);
+    @include spaceling(0 auto, 20px 0);
+    @include colorized ($color-secundary, $color-fifth);
     width: 100%;
-    /* otra opción en vez del padding hubiese sido
-    crear un contenedor y darle un ancho y posicionarlo
-    en el centro */
-    padding: 20px 0px;
-    margin: 0 auto;
-    background-color: #80B1FF;
+
     &__description{
         width: 40%;
-        color: white;
         font-weight: bold;
     }
     &__form{
         width: 30%;
-        form{
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-        }
-        
 
+        form{
+            @include flex (flex, column nowrap, normal, center);
+        }
     }
     &__title{
         font-size: 26px;
@@ -33,33 +24,31 @@
         font-size: 20px;
     }
     &__input{
+        @include spaceling(0, 8px 20px);
+        @include colorized (lightgray, $color-secundary);
         font-family: 'Comic Neue';
         font-weight: bold;
-        width: 100%;
-        padding: 8px 20px;
+        max-width: 90%;
         font-size: 16px;
-        background-color: white;
         border-radius: 8px;
         box-shadow: 0px 3px 0px #6d96d8;
         border: 1px solid lightgray;
-        color: lightgray;
     }
     &__submit{
-        width: 80%;
-        margin-top: 10px;
-        padding: 8px 20px;
+        @include spaceling(10px 0 0 0, 8px 20px);
+        @include colorized ($color-fourth, $color-secundary);
         font-weight: bold;
         font-size: 16px;
         text-align: center;
-        color: #5086DC;
-        background-color: white;
         border-radius: 8px;
         border:1px solid;
         box-shadow: 0px 3px 0px #6d96d8;
+
         &:hover{
-            color: white;
-            background-color: #5086DC;
+            @include colorized ($color-secundary, $color-fourth);
             box-shadow: 0px 3px 0px white;
         }
     }
 }
+
+

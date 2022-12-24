@@ -1,3 +1,4 @@
+
 .main-banner{
     width: 100%;
     position: relative;
@@ -7,11 +8,11 @@
     }
     &__title{
         position: absolute;
+        @include spaceling(0 auto, 0);
         width: 60%;
         top: 50px;
         left: 0;
         right: 0;
-        margin: 0 auto;
         text-align: center;  
     }
     &__text-1{
@@ -22,26 +23,23 @@
     }
     &__button{
             /* tamaño y posición */
+        @include spaceling(0 auto, 1% 0);
         position: absolute;
         bottom:50px;
         left: 0;
         right: 0;
-        margin: 0 auto;
-        padding: 2% 5%;
-        width: 30%;
+        width: 150px;
             /* diseño */
-        color: #5086DC;
-        background-color: white;
+        @include colorized ($color-fourth, $color-secundary);
         border-radius: 8px;
         box-shadow: 0px 3px 0px #6d96d8;
         border:2px solid;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
         text-decoration: none;
         text-align: center;
         &:hover{
-            color: white;
-            background-color: #5086DC;
+            @include colorized ($color-secundary, $color-fourth);
             box-shadow: 0px 3px 0px white;
         }
     }    

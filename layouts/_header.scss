@@ -1,53 +1,63 @@
 
-/* HEADER */
-
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 15px 0;
-    background-color: white;
+    @include flex(flex, row nowrap, space-evenly, center);
+    @include spaceling(0, 15px 0);
+    @include colorized ($color-principal, $color-secundary);
     border-bottom: 3px solid rgba(211, 211, 211,0.5);
     width: 100%;
     &__logo{
         width: 35px;
     }
     .nav{
-        font-size: 15px;
+        font-size: 12px;
         font-weight: bold;
         width: 70%;
         &__list{
+            @include flex(flex, row nowrap, space-between, center);
             list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
         }
         &__item{
+            @include spaceling(0, 10px);
             display: inline-block;
-            padding: 10px;
             &:hover{
-                color: white;
-                background-color: #99E2FF;
+                @include colorized ($color-secundary, $color-third);
                 border-radius: 50px;
-                
             }
         }
     }
     &__button{
+        @include spaceling(0, 2px 15px);
+        @include colorized ($color-secundary, $color-fifth);
+        font-size: 15px;
         text-decoration: none;
         font-weight: bold;
-        color: white;
-        background-color: #80B1FF;
         box-shadow: 0px 2px 0px #6d96d8;
         border-radius: 8px;
-        padding: 2px 15px;
         &:hover{
-            color: #6d96d8;
-            background-color: #99E2FF;
+            @include colorized ($color-fourth, $color-third);
             box-shadow: 0px 2px 0px #6d96d8;
-            
         }
     }
 }
 
+@media screen and (min-width:768px) and (max-width:1023px){
+    .header{
+        .nav{
+            font-size: 22px;
+        }
+        &__button{
+            font-size: 22px;  
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .header{
+        .nav{
+            font-size: 22px;
+        }
+        &__button{
+            font-size: 22px;
+        }
+    }
+}

@@ -1,18 +1,17 @@
 
 .footer{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(flex, row nowrap, space-around, center);
+    @include colorized(none,#FFA4D4);
     width: 100%;
     min-height: 100px;
-    background-color: #FFA4D4;
     &__img{
         width: 100px;
     }
     &__copy{
-        margin-top: 10px;
-        color: #FC7CC5;
+        @include spaceling (10px 0 0 0, 0);
+        @include colorized(#FC7CC5, none);
         font-weight: bold;
     }
 }
+
+
