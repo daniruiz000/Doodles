@@ -5,17 +5,18 @@
     
     &__title{
         position: absolute;
-        @include spaceling(0 auto, 0);
+        @include spaceling(0 auto);
         width: 60%;
         top: 50px;
         left: 0;
         right: 0;
-        text-align: center;  
     }
     &__text-1{
+        @include spaceling(0 auto);
         width: 70%;
     }
     &__text-2{
+        @include spaceling(0 auto);
         width: 40%;
     }
     &__button{

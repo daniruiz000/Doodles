@@ -1,19 +1,19 @@
 
 .news{
-    @include spaceling(80px auto, 0);
+    @include spaceling(80px auto);
     width: 90%;
 
     &__header{
-        @include spaceling(0 auto, 0);
-        max-width: 70%;
+        @include spaceling(0 auto);
+        max-width: 60%;
     }
     &__list{
-        @include spaceling(50px 0 0 0, 0);
+        @include spaceling(50px 0 0 0);
         @include flex(flex, row wrap, space-between, start);
     }
 
     &__item{
-        @include spaceling(15px auto, 0);
+        @include spaceling(15px auto);
         min-width: 250px;
         width: 40%;
     }
@@ -22,20 +22,20 @@
         border-top-right-radius: 20px;
     }
     &__description{
-        @include colorized(none, $color-secundary);
+        @include colorized($background-color:$color-secundary);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         
     }
     &__title{
         @include spaceling(0, 20px 20px 0px 20px);
-        @include colorized(#313A71, none);
+        @include colorized(#313A71);
         font-weight: bold;
         font-size: 18px;
     }
     &__date{
         @include spaceling(0, 20px);
-        @include colorized(darkgray, none);
+        @include colorized(darkgray);
         font-weight: bold;
         font-size: 16px;
     }  

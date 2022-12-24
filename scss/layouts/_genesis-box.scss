@@ -1,11 +1,11 @@
 
 .genesis-box{
-    @include spaceling(10px auto, 0);
+    @include spaceling(2em auto, 0);
     position: relative;
     width: 430px;
 
     &__description{
-        @include spaceling(0, 20px);
+        @include spaceling(0, 2em);
         position: absolute;
         width:50%;
     }
@@ -13,7 +13,7 @@
         border-radius: 30px;
     }
     &__text{
-        @include spaceling(10px 0 0 0, 0);
+        @include spaceling(1em 0 0 0, 0);
         @include colorized($color-secundary, none);
         font-weight: bold;
         font-size: 10px;
@@ -26,23 +26,38 @@
         width: 50%;
     }
     &__button{
-        @include spaceling(0,5px 15px);
+        @include spaceling(0,1em 1.5em);
         @include colorized($color-secundary, none);
         font-weight: bold;
         text-align: center;
         font-size: 10px;
-        width: 40%;
+        width: 50%;
     }
     &__button-buy{
-        @include spaceling(5px 0 0 0, 0);
+        @include spaceling(1em 0 0 0, 0);
         @include colorized($color-secundary, $color-fifth);
         border-radius: 8px;
         box-shadow: 0px 2px 0px #6d96d8;
     }
     &__button-learn{
-        @include spaceling(5px 0 0 0, 0);
+        @include spaceling(1em 0 0 0, 0);
         text-shadow: 0px 2px black;
     } 
+}
+
+@media screen and (min-width:1024px){
+    .genesis-box{
+        width: 800px;
+
+        &__text{
+            font-size: 20px;
+        }
+        &__button{
+            font-size: 20px;
+        }
+
+    }
+
 }
 
 

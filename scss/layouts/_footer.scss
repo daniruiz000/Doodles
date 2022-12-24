@@ -1,15 +1,15 @@
 
 .footer{
-    @include flex(flex, row nowrap, space-around, center);
-    @include colorized(none,#FFA4D4);
+    @include flex($justify-content:space-around, $align-items:center);
+    @include colorized($background-color:#FFA4D4);
     width: 100%;
     min-height: 100px;
     &__img{
         width: 100px;
     }
     &__copy{
-        @include spaceling (10px 0 0 0, 0);
-        @include colorized(#FC7CC5, none);
+        @include spaceling (10px 0 0 0);
+        @include colorized(#FC7CC5);
         font-weight: bold;
     }
 }

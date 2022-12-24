@@ -10,7 +10,7 @@
     padding:$padding;
 }
 
-@mixin colorized ($color, $background-color){
+@mixin colorized ($color:$color-principal, $background-color: transparent){
     color: $color;
     background-color:$background-color;
 }

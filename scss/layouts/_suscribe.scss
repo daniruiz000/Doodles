@@ -13,7 +13,7 @@
         width: 30%;
 
         form{
-            @include flex (flex, column nowrap, normal, center);
+            @include flex ($flex-flow:column nowrap, $align-items:center);
         }
     }
     &__title{
