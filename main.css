@@ -103,12 +103,12 @@ body {
   right: 0;
 }
 .main-banner__text-1 {
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 0;
   width: 70%;
 }
 .main-banner__text-2 {
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 0;
   width: 40%;
 }

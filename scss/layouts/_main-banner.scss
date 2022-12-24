@@ -12,11 +12,11 @@
         right: 0;
     }
     &__text-1{
-        @include spaceling(0 auto);
+        @include spaceling(1em auto);
         width: 70%;
     }
     &__text-2{
-        @include spaceling(0 auto);
+        @include spaceling(1em auto);
         width: 40%;
     }
     &__button{
